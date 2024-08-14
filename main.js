@@ -9,6 +9,10 @@ function fetchData() {
     const city = document.getElementById('searchInput').value.trim();
     const countryCode = document.getElementById('countryCodeInput').value.trim().toUpperCase();
 
+    if (city === 'hi' || countryCode === 'HI') {
+        return;
+    }
+
     if (!city && !countryCode) {
         return;
     }
